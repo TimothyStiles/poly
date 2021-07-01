@@ -70,6 +70,19 @@ func ComplementBase(basePair rune) rune {
 	return complementBaseRuneMap[basePair]
 }
 
+// GcContent returns the percent GC content of a sequence.
+func GcContent(sequence string) float64 {
+	var gcPairs int
+	for _, basepair := range sequence {
+		if basepair == 'G' || basepair == 'C' {
+			gcPairs++
+			continue
+		}
+	}
+	gcContent := float64(gcPairs) / float64(len(sequence))
+	return gcContent
+}
+
 // IsPalindromic accepts a sequence of even length and returns if it is
 // palindromic. More here - https://en.wikipedia.org/wiki/Palindromic_sequence
 func IsPalindromic(sequence string) bool {

@@ -2,6 +2,7 @@ package poly
 
 import (
 	"errors"
+
 	"math/rand"
 	"strings"
 	"time"

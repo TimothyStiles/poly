@@ -140,6 +140,13 @@ func TestRandomProteinSequenceError(t *testing.T) {
 	}
 }
 
+func ExampleGcContent() {
+	gcContent := GcContent("ATGC")
+
+	fmt.Println(gcContent)
+	// Output: 0.5
+}
+
 func TestIsPalindromic(t *testing.T) {
 	ecori := IsPalindromic("GAATTC")
 	if ecori != true {
